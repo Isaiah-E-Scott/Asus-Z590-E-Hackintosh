@@ -101,5 +101,5 @@
     - DVMT Pre-Allocated missing in bios
         - Resolution: Power down your computer and move your HDMI or Display Cable to the motherboard ports and power up. Wait for the display to be connected and enter the bios. Now the option should be there.
     - Sleep/Wake Issues
-        - Resolution: Recreate your SSDTs for your specific build. I used the [Dortania guides](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-platform.html#desktop) for this.
+        - Resolution: Recreate your SSDTs for your specific build. I used the Dortania guides for this.
             - https://dortania.github.io/Getting-Started-With-ACPI/ssdt-platform.html#desktop
