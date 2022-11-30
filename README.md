@@ -4,6 +4,8 @@ This repository is about hackintosh on Asus ROG STRIX Z590-E. All the hardware i
 
 Anyone who has the same board can use my EFI directly or with minimal changes. The source EFI folder uses the release version of OpenCore. If you are having issues then it’s recommended to use the debug version for troubleshooting.
 
+This build is utilizing a multiple drive triple boot of Mac, Windows and Linux. This means that each operating system is installed on its own drive and separated from one another. I will not be providing a guide for single drive multi booting.
+
 Don’t forget to edit the EFI/OC/config.plist file, you should generate your own SMBIOS info by following the [Comet Lake Config Guide #PlatformInfo.](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#platforminfo)
 
 Highly recommended reading the whole OpenCore Install Guide before starting.
@@ -14,6 +16,8 @@ Highly recommended reading the whole OpenCore Install Guide before starting.
 
 -   **Bootloader:** OpenCore 0.8.6-Release
 -   **Operating System:** macOS Monterey 12.6.1 (iMac20,2)
+-   **Operating System:** Windows 10 Pro
+-   **Operating System:** Ubuntu 22.10
 --------------------------------------------------------------------------------------------------------------
 
 # Hardware
