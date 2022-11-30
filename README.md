@@ -104,11 +104,22 @@ Highly recommended reading the whole OpenCore Install Guide before starting.
 --------------------------------------------------------------------------------------------------------------
 
 # Troubleshooting:
-- Random Freezes/Reboots:
-    - Resolution: Remove all samsung drives from the build. Samdung SSD controllers are not compatible with Mac OS seemingly what so ever. If you have any Samsung drives in your system, I recommend you remove them for this build. Having them installed even just as storage drives causes random freezes and crashes.
+- **Random Freezes/Reboots:**
+    - **Resolution:** Remove all samsung drives from the build. Samdung SSD controllers are not compatible with Mac OS seemingly what so ever. If you have any Samsung drives in your system, I recommend you remove them for this build. Having them installed even just as storage drives causes random freezes and crashes.
         - drives tested with: Samsung PM981, Samsung 870 QVO
-- DVMT Pre-Allocated missing in bios
-    - Resolution: Power down your computer and move your HDMI or Display Cable to the motherboard ports and power up. Wait for the display to be connected and enter the bios. Now the option should be there.
-- Sleep/Wake Issues
-    - Resolution: Recreate your SSDTs for your specific build. I used the Dortania guides for this.
+        <br>
+- **DVMT Pre-Allocated missing in bios**
+    - **Resolution:** Power down your computer and move your HDMI or Display Cable to the motherboard ports and power up. Wait for the display to be connected and enter the bios. Now the option should be there.
+    <br>
+- **Sleep/Wake Issues**
+    - **Resolution 1:** change your bios settings
+        - Bios/Advance/APM Configuration/ErP Ready to: Enable (S4+S5)
+            - this prevents USB from immediately waking up and this allows it to actually sleep
+    - **Resolution 2:** Recreate your SSDTs for your specific build. I used the Dortania guides for this.
         - https://dortania.github.io/Getting-Started-With-ACPI/ssdt-platform.html#desktop
+        <br>
+- **Black Screen when booting:**
+    - **Resolution:** add agdpmod=pikera to bootargs
+    <br>
+- **If you are using a DGPU in the first pcie slot:**
+    - **Resolution:** delete block PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0) in config.plist
