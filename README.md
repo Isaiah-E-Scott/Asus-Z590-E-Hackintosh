@@ -1,4 +1,4 @@
-# Asus-Z590-E-Hackintosh
+# Asus-Z590-E-Hackintosh Triple Boot Guide
 
 This repository is about hackintosh on Asus ROG STRIX Z590-E. All the hardware is working as expected, and it's ready for daily usage.
 
@@ -9,6 +9,16 @@ This build is utilizing a multiple drive triple boot of Mac, Windows and Linux. 
 Don’t forget to edit the EFI/OC/config.plist file, you should generate your own SMBIOS info by following the [Comet Lake Config Guide #PlatformInfo.](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#platforminfo)
 
 Highly recommended reading the whole OpenCore Install Guide before starting.
+
+--------------------------------------------------------------------------------------------------------------
+
+# Table of Contents
+- [Software](#software)
+- [Hardware](#hardware)
+- [Bios](#bios)
+- [Functionality](#functionality)
+- [Troubleshooting](#troubleshooting)
+- [Installation](#installation)
 
 --------------------------------------------------------------------------------------------------------------
     
@@ -36,7 +46,7 @@ Highly recommended reading the whole OpenCore Install Guide before starting.
 
 --------------------------------------------------------------------------------------------------------------
 
-# BIOS Settings
+# BIOS
 - **Bios Version:** 1402
 
 ## Advanced
@@ -74,7 +84,7 @@ Highly recommended reading the whole OpenCore Install Guide before starting.
 - Boot Configuration
     - Fast Boot: Disabled
 
-# Missing From Bios:
+## Missing From Bios
 - VT-x
 - Execute Disable Bit
 - Software Guard Extensions (SGX)
@@ -82,7 +92,8 @@ Highly recommended reading the whole OpenCore Install Guide before starting.
 
 --------------------------------------------------------------------------------------------------------------
 
-# What's Working:
+# Functionality
+## What's Working:
  &#x2611; Intel UHD630 headless mode (iGPU)<br/>
  &#x2611; AMD Radeon Pro WX 4100 (dGPU)<br/>
  &#x2611; Audio Realtek ALCS1220A<br/>
@@ -95,19 +106,20 @@ Highly recommended reading the whole OpenCore Install Guide before starting.
  &#x2611; Handoff<br/>
  &#x2611; Continuity<br/>
 
-# To Test:
+## To Test:
  &#x2610; Amazon Prime Video and Netflix in Safari<br/>
  &#x2610; AppleTV<br/>
  &#x2610; SideCar<br/>
  &#x2610; Facetime<br/>
  &#x2610; iMessage<br/>
-# Not Working:
+ 
+## Not Working:
  &#x2612; Thunderbolt<br/>
  &#x2612; iGPU display out (Z590 chipset is not compatilbe with hardware acceleration)<br/>
 
 --------------------------------------------------------------------------------------------------------------
 
-# Troubleshooting:
+# Troubleshooting
 - **Random Freezes/Reboots:**
     - **Resolution:** Remove all samsung drives from the build. Samdung SSD controllers are not compatible with Mac OS seemingly what so ever. If you have any Samsung drives in your system, I recommend you remove them for this build. Having them installed even just as storage drives causes random freezes and crashes.
         - drives tested with: Samsung PM981, Samsung 870 QVO
