@@ -10,6 +10,14 @@ Don’t forget to edit the EFI/OC/config.plist file, you should generate your ow
 
 Highly recommended reading the whole OpenCore Install Guide before starting.
 
+- image of triple boot loader
+
+- image of about mac
+
+- image of intel power gadget
+
+- image of geekbench 5 scores
+
 --------------------------------------------------------------------------------------------------------------
 
 # Table of Contents
@@ -17,8 +25,10 @@ Highly recommended reading the whole OpenCore Install Guide before starting.
 - [Hardware](#hardware)
 - [Bios](#bios)
 - [Functionality](#functionality)
-- [Troubleshooting](#troubleshooting)
 - [Installation](#installation)
+- [Post Installation](#post_installation)
+- [Troubleshooting](#troubleshooting)
+- [Changelog](#changelog)
 
 --------------------------------------------------------------------------------------------------------------
     
@@ -28,6 +38,7 @@ Highly recommended reading the whole OpenCore Install Guide before starting.
 -   **Operating System:** macOS Monterey 12.6.1 (iMac20,2)
 -   **Operating System:** Windows 10 Pro
 -   **Operating System:** Ubuntu 22.10
+
 --------------------------------------------------------------------------------------------------------------
 
 # Hardware
@@ -51,21 +62,22 @@ Highly recommended reading the whole OpenCore Install Guide before starting.
 
 ## Advanced
 - CPU Configuration
-    - Intel (VMX) Virtualization Technology: Enabled (if DisableIoMapper to YES)
+    - Intel (VMX) Virtualization Technology: Enabled _(if DisableIoMapper to YES)_
     - Hyper-Threading: Enabled
 - System Agent (SA)-Configuration
-    - VT-d: Enabled (if DisableIoMapper to YES)
+    - VT-d: Enabled _(if DisableIoMapper to YES)_
     - Memory Configuration
-       - Memory Remap Feature: Enabled (if DisableIoMapper to YES)
+       - Memory Remap Feature: Enabled _(if DisableIoMapper to YES)_
     - Graphics Configuration
-       - iGPU Multi-Monitor: Enabled (disable if you don't have igpu)
-       - DVMT Pre-Allocated: 128 MB (skip if you don't have igpu)
+       - iGPU Multi-Monitor: Enabled _(disable if you don't have igpu)_
+       - DVMT Pre-Allocated: 64 MB _(skip if you don't have igpu)_
+           - _I personally use 128 MB as I use a 3440x1440 monitor. Test as needed_
 - APM Configuration
-    - ErP Ready to: Enable (S4+S5) (enable full sleep without leds)
+    - ErP Ready to: Enable (S4+S5) _(enable full sleep without leds)_
 - PCH Storage Configuration
     - SATA Mode Selection: AHCI
 - PCH-FW Configuration
-    - PTT: Disabled (this is Intel Platform Trust / TPM)
+    - PTT: Disabled _(this is Intel Platform Trust / TPM)_
 - Thunderbolt(TM) Configuration
     - Discrete Thunderbolt(TM) Support: Disabled
 - PCI Subsystem Settings
@@ -74,9 +86,10 @@ Highly recommended reading the whole OpenCore Install Guide before starting.
 - USB Configuration
     - Legacy USB Support: Enabled
     - XHCI Hand-off: Enabled
+
 ## Boot
-- CSM (Compatibility Support Module)
-    - Launch CSM: Disabled (Must be off in most cases, GPU errors/stalls like gIO are common when enabled)
+- CSM _(Compatibility Support Module)_
+    - Launch CSM: Disabled _(Must be off in most cases, GPU errors/stalls like gIO are common when enabled)_
 - Secure Boot
     - OS Type: Windows UEFI mode
     - Key Management
@@ -87,12 +100,13 @@ Highly recommended reading the whole OpenCore Install Guide before starting.
 ## Missing From Bios
 - VT-x
 - Execute Disable Bit
-- Software Guard Extensions (SGX)
-- CFG-Lock (Asus Z590 are factory unlocked. AppleCpuPmCfgLock and AppleXcpmCfgLock quirks are not needed)
+- Software Guard Extensions _(SGX)_
+- CFG-Lock _(Asus Z590 are factory unlocked. AppleCpuPmCfgLock and AppleXcpmCfgLock quirks are not needed)_
 
 --------------------------------------------------------------------------------------------------------------
 
 # Functionality
+
 ## What's Working:
  &#x2611; Intel UHD630 headless mode (iGPU)<br/>
  &#x2611; AMD Radeon Pro WX 4100 (dGPU)<br/>
@@ -105,7 +119,7 @@ Highly recommended reading the whole OpenCore Install Guide before starting.
  &#x2611; Power Management (Native support)<br/>
  &#x2611; Handoff<br/>
  &#x2611; Continuity<br/>
-
+ 
 ## To Test:
  &#x2610; Amazon Prime Video and Netflix in Safari<br/>
  &#x2610; AppleTV<br/>
@@ -116,6 +130,21 @@ Highly recommended reading the whole OpenCore Install Guide before starting.
 ## Not Working:
  &#x2612; Thunderbolt<br/>
  &#x2612; iGPU display out (Z590 chipset is not compatilbe with hardware acceleration)<br/>
+
+--------------------------------------------------------------------------------------------------------------
+
+# Installation
+
+If you intend to dual boot or triple boot your machine, then I highly recommend you install them in the following order, Ubuntu, Windows, Then Mac OS. This is because grub has a bad habit of installing the efi installation files on whatever efi partition is available in the system. As such, just do it first without any drives in the system. THis will save you a bunch of time.
+
+## Ubuntu
+
+This is the easiest process. Just follow the provided guide from the official website.
+- https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview
+
+--------------------------------------------------------------------------------------------------------------
+
+# Post_Installation
 
 --------------------------------------------------------------------------------------------------------------
 
@@ -139,3 +168,7 @@ Highly recommended reading the whole OpenCore Install Guide before starting.
     <br>
 - **If you are using a DGPU in the first pcie slot:**
     - **Resolution:** delete block PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0) in config.plist
+
+--------------------------------------------------------------------------------------------------------------
+
+# Changelog
