@@ -14,13 +14,9 @@ Highly recommended reading the whole OpenCore Install Guide before starting.
 
 ![Screen Shot 2022-11-30 at 9 25 22 PM](https://user-images.githubusercontent.com/14919064/204953256-bb909cd8-accd-4b82-9e81-7ca227769dd8.png)
 
-![Screen Shot 2022-11-30 at 9 26 04 PM](https://user-images.githubusercontent.com/14919064/204952736-bcbe2905-c114-40a7-9a4e-839b5d1bf5cc.png)
-
-![Screen Shot 2022-11-30 at 9 29 07 PM](https://user-images.githubusercontent.com/14919064/204953513-575283b5-9040-4164-9a1e-75ad6bec7835.png)
-
-![Screen Shot 2022-11-30 at 9 30 55 PM](https://user-images.githubusercontent.com/14919064/204953529-17ad44fb-6b4a-415c-8d96-45a3e734c091.png)
-
 ![Screen Shot 2022-11-30 at 9 24 14 PM](https://user-images.githubusercontent.com/14919064/204953542-616c04e1-ccee-4be2-9f11-23cfc8cb5141.png)
+
+- image of geekbench scores
 
 --------------------------------------------------------------------------------------------------------------
 
@@ -158,9 +154,7 @@ If you intend to dual boot or triple boot your machine, then I highly recommend 
 
 ## Mac
 
-1. Remove all drives that have any operating systems from your machine.
-2. This is the easiest process. Just follow the provided guide from the official website.
-    - https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview
+1. 
 
 --------------------------------------------------------------------------------------------------------------
 
