@@ -33,6 +33,8 @@ Highly recommended reading the whole OpenCore Install Guide before starting.
    - [IGPU](#igpu)
    - [NO_IGPU](#no_igpu)
    - [Wi-Fi/Bluetooth](#wi-fi)
+   - [USB](#usb)
+   - [Sleep](#sleep)
 - [Troubleshooting](#troubleshooting)
 - [Changelog](#changelog)
 
@@ -219,6 +221,14 @@ In order to do this, you must remove the vrm heatsink, pcie cover, and the first
 ![Untitled (4)](https://user-images.githubusercontent.com/14919064/205151148-18a75ae7-bdbd-4908-835d-2d51f75eaa1e.jpg)
 
 ![rE00QKoJC0LEKEcNljoaXoM4FhIhuiJVeaFQnvfJn4A](https://user-images.githubusercontent.com/14919064/205152263-55391634-418b-402b-ad88-b90dcf818888.jpg)
+
+## Sleep
+
+Wake works with DP output and power button. GPRW Patch is used to disabling the USB device instant wake.
+
+Note:
+
+- Without enabling GPRW, a keyboard press or mouse click can wake up the display as well, but a second press or click is needed when the light is on, I tried to fix it by following Keyboard Wake Issues Guide, but didn't work. So my choice is to just use the power button, disable SSDT-GPRW if you want to use a keyboard or mouse to wake up.
 
 --------------------------------------------------------------------------------------------------------------
 
