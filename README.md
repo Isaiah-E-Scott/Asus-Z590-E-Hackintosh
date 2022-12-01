@@ -2,9 +2,9 @@
 
 This repository is about hackintosh on Asus ROG STRIX Z590-E. All the hardware is working as expected, and it's ready for daily usage.
 
-Anyone who has the same board can use my EFI directly or with minimal changes. The source EFI folder uses the release version of OpenCore. If you are having issues then it’s recommended to use the debug version for troubleshooting.
+Anyone who has the same board can use my EFI directly or with minimal changes. The source EFI folder uses the release version of OpenCore. If you are having issues, then it’s recommended to use the debug version for troubleshooting.
 
-This build is utilizing a multiple drive triple boot of Mac, Windows and Linux. This means that each operating system is installed on its own drive and separated from one another. I will not be providing a guide for single drive multi booting.
+This build is utilizing a multiple drive triple boot of Mac, Windows, and Linux. This means that each operating system is installed on its own drive and separated from one another. I will not be providing a guide for single drive multi booting.
 
 Don’t forget to edit the EFI/OC/config.plist file, you should generate your own SMBIOS info by following the [Comet Lake Config Guide #PlatformInfo.](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#platforminfo)
 
@@ -30,6 +30,9 @@ Highly recommended reading the whole OpenCore Install Guide before starting.
     - [Windows](#windows)
     - [Mac](#mac)
 - [Post Installation](#post_installation)
+   - [IGPU](#igpu)
+   - [NO_IGPU](#no_igpu)
+   - [Wi-Fi/Bluetooth](#wi-fi)
 - [Troubleshooting](#troubleshooting)
 - [Changelog](#changelog)
 
@@ -164,11 +167,64 @@ If you intend to dual boot or triple boot your machine, then I highly recommend 
 
 # Post_Installation
 
+## IGPU
+This is enabled in the EFI by default
+
+Intel UHD630 Headless mode working for hardware acceleration
+
+Working by: **ig-platform-id = 0300C89B**
+
+DeviceProperties:
+```
+<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+	<dict>
+		<key>AAPL,ig-platform-id</key>
+		<data>AwDImw==</data>
+	</dict>
+```
+
+## No_IGPU
+This is for f skew processors without IGPU
+
+Remove the iGPU code block from above
+
+also remove **igfxonln=1** from the boot-args
+
+it would end up looking like this:
+```
+<key>boot-args</key>
+<string>debug=0x100 keepsyms=1</string>
+```
+
+## Wi-Fi
+
+The only way to get fully functioning bluetooth and wi-fi is to replace the wi-fi card. I ended up replacing the onboard wi-fi card in the motherboard itself with BCM94360NG. Therefore, we keep all of our pci-e expansion slots.
+
+In order to do this, you must remove the vrm heatsink, pcie cover, and the first m.2 heatsink to access the wi-fi card.
+
+1. remove the first m.2 heatsink
+2. remove the screws from the underside of the motherboard
+3. remove the heatsinksfrom the motherboard
+4. remove the integrated io shield
+5. remove the silver enloosure holding the wi-fi card
+6. unscrew and unplug the old wi-fi card
+7. replace the old wifi card and plug the cables back in for the antennas
+    - there will be some tape holding the original card down. it should peel away after a little force is applied
+8. put it all back together in reverse order
+
+![Untitled (2)](https://user-images.githubusercontent.com/14919064/205151101-78ab7113-987e-42e1-903f-2af21152c24a.jpg)
+
+![Untitled (3)](https://user-images.githubusercontent.com/14919064/205151135-8b50258a-74fc-458c-b917-dd2ded64a3a1.jpg)
+
+![Untitled (4)](https://user-images.githubusercontent.com/14919064/205151148-18a75ae7-bdbd-4908-835d-2d51f75eaa1e.jpg)
+
+![rE00QKoJC0LEKEcNljoaXoM4FhIhuiJVeaFQnvfJn4A](https://user-images.githubusercontent.com/14919064/205152263-55391634-418b-402b-ad88-b90dcf818888.jpg)
+
 --------------------------------------------------------------------------------------------------------------
 
 # Troubleshooting
 - **Random Freezes/Reboots:**
-    - **Resolution:** Remove all samsung drives from the build. Samdung SSD controllers are not compatible with Mac OS seemingly what so ever. If you have any Samsung drives in your system, I recommend you remove them for this build. Having them installed even just as storage drives causes random freezes and crashes.
+    - **Resolution:** Remove all samsung drives from the build. Samdung SSD controllers are not compatible with Mac OS seemingly whatsoever. If you have any Samsung drives in your system, I recommend you remove them for this build. Having them installed even just as storage drives causes random freezes and crashes.
         - drives tested with: Samsung PM981, Samsung 870 QVO
         <br>
 - **DVMT Pre-Allocated missing in bios**
@@ -190,3 +246,5 @@ If you intend to dual boot or triple boot your machine, then I highly recommend 
 --------------------------------------------------------------------------------------------------------------
 
 # Changelog
+
+V1: initial release on Opencore 8.6 for Monterey 12.6.1
