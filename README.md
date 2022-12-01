@@ -154,7 +154,11 @@ If you intend to dual boot or triple boot your machine, then I highly recommend 
 
 ## Mac
 
-1. 
+1. boot into Windows
+2. follow the Dortania guide to create the installation usb using windows
+    -  https://dortania.github.io/OpenCore-Install-Guide/installer-guide/winblows-install.html#downloading-macos
+3. copy my provided EFI folder into your usb
+4. 
 
 --------------------------------------------------------------------------------------------------------------
 
