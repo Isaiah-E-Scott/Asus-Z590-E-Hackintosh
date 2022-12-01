@@ -16,7 +16,7 @@ Highly recommended reading the whole OpenCore Install Guide before starting.
 
 ![Screen Shot 2022-11-30 at 9 24 14 PM](https://user-images.githubusercontent.com/14919064/204953542-616c04e1-ccee-4be2-9f11-23cfc8cb5141.png)
 
-- image of geekbench scores
+![Screen Shot 2022-12-01 at 7 01 27 AM](https://user-images.githubusercontent.com/14919064/205048290-a35dd6a3-3cf0-4208-b533-e488d56bd118.png)
 
 --------------------------------------------------------------------------------------------------------------
 
