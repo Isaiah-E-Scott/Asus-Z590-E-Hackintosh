@@ -10,13 +10,17 @@ Don’t forget to edit the EFI/OC/config.plist file, you should generate your ow
 
 Highly recommended reading the whole OpenCore Install Guide before starting.
 
-- image of triple boot loader
+- image of opencore bootloader
 
-- image of about mac
+![Screen Shot 2022-11-30 at 9 25 22 PM](https://user-images.githubusercontent.com/14919064/204953256-bb909cd8-accd-4b82-9e81-7ca227769dd8.png)
 
-- image of intel power gadget
+![Screen Shot 2022-11-30 at 9 26 04 PM](https://user-images.githubusercontent.com/14919064/204952736-bcbe2905-c114-40a7-9a4e-839b5d1bf5cc.png)
 
-- image of geekbench 5 scores
+![Screen Shot 2022-11-30 at 9 29 07 PM](https://user-images.githubusercontent.com/14919064/204953513-575283b5-9040-4164-9a1e-75ad6bec7835.png)
+
+![Screen Shot 2022-11-30 at 9 30 55 PM](https://user-images.githubusercontent.com/14919064/204953529-17ad44fb-6b4a-415c-8d96-45a3e734c091.png)
+
+![Screen Shot 2022-11-30 at 9 24 14 PM](https://user-images.githubusercontent.com/14919064/204953542-616c04e1-ccee-4be2-9f11-23cfc8cb5141.png)
 
 --------------------------------------------------------------------------------------------------------------
 
@@ -26,6 +30,9 @@ Highly recommended reading the whole OpenCore Install Guide before starting.
 - [Bios](#bios)
 - [Functionality](#functionality)
 - [Installation](#installation)
+    - [Ubuntu](#ubuntu)
+    - [Windows](#windows)
+    - [Mac](#mac)
 - [Post Installation](#post_installation)
 - [Troubleshooting](#troubleshooting)
 - [Changelog](#changelog)
@@ -135,12 +142,25 @@ Highly recommended reading the whole OpenCore Install Guide before starting.
 
 # Installation
 
-If you intend to dual boot or triple boot your machine, then I highly recommend you install them in the following order, Ubuntu, Windows, Then Mac OS. This is because grub has a bad habit of installing the efi installation files on whatever efi partition is available in the system. As such, just do it first without any drives in the system. THis will save you a bunch of time.
+If you intend to dual boot or triple boot your machine, then I highly recommend you install them in the following order, Ubuntu, Windows, Then Mac OS. This is because **grub and the windows boot loader has a bad habit of installing the efi installation files on whatever efi partition is available in the system. As such, just do it them without any drives in the system.** This will save you a bunch of time.
 
 ## Ubuntu
 
-This is the easiest process. Just follow the provided guide from the official website.
-- https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview
+1. Remove all drives that have any operating systems from your machine.
+2. This is the easiest process. Just follow the provided guide from the official website.
+    - https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview
+
+## Windows
+
+1. Remove all drives that have any operating systems from your machine.
+2. This is another easy one. Just follow the provided guide from the official website.
+    - https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/install-windows-from-a-usb-flash-drive?view=windows-11
+
+## Mac
+
+1. Remove all drives that have any operating systems from your machine.
+2. This is the easiest process. Just follow the provided guide from the official website.
+    - https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview
 
 --------------------------------------------------------------------------------------------------------------
 
