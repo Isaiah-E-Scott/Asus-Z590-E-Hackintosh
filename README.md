@@ -266,3 +266,6 @@ Note:
 # Changelog
 
 V1: initial release on Opencore 8.6 for Monterey 12.6.1
+
+https://github.com/jergoo/Hackintosh-ROG-STRIX-Z490I
+https://github.com/5T33Z0/Gigabyte-Z490-Vision-G-Hackintosh-OpenCore
