@@ -54,10 +54,12 @@ Highly recommended reading the whole OpenCore Install Guide before starting.
 | Component         | Details                                                                                         |
 | :-----------      | :-------------                                                                                  |
 | **Motherboard:**  | Asus ROG Strix Z590-E Gaming                                                                    |
-| **CPU:**          | Intel Core i9-10900K                                                                            |
 | **RAM:**          | <ul><li>TEAMGROUP T-Force Xtreem ARGB 3600MHz CL14 (2 x 16GB)</li><li>G.Skill Trident Z RGB 3600MHz CL14 (2 x 16GB)</li></ul> |
+| **CPU:**          | Intel Core i9-10900K                                                                            |
+| **iGPU:**         | Intel UHD 630 (Headless)                                                                        |
 | **GPU:**          | <ul><li>AMD Radeon Pro WX 4100 4GB</li><li>Nvidia RTX 3080 Founders Edition 10GB</li></ul>      |
 | **Wi-Fi/BT:**     | Broadcom BCM94360NG 802.11ac 1200Mbps Bluetooth 4.0                                             |
+| **Audio:**        | Realtek ALC4080 + Savitech SV3H712 AMP (layout-id:7)                                            |
 | **Ethernet:**     | Intel 2.5 Gb Ethernet I225-V                                                                    |
 | **Storage NVME:** | <ul><li>1x WD Black SN850 1TB</li><li>1x WD Blue SN570 1TB</li><li>1x Toshiba XG3 1TB</li></ul> |
 | **Storage SATA:** | <ul><li>2x WD Blue WDS100T2B0A 1TB</li><li>1x WD Blue WDS400T2B0A 4TB</li></ul>                 |
