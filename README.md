@@ -50,18 +50,21 @@ Highly recommended reading the whole OpenCore Install Guide before starting.
 --------------------------------------------------------------------------------------------------------------
 
 # Hardware
--   **Motherboard:** Asus ROG Strix Z590-E Gaming
--   **CPU:** Intel Core i9-10900K
--   **RAM:** TEAMGROUP T-Force Xtreem ARGB + G.Skill Trident Z RGB [3600MHz CL14 (4 x 16GB) CL14-15-15-35]
--   **GPU:** AMD Radeon Pro WX 4100 + Nvidia RTX 3080 Founders Edition
--   **Wi-Fi/BT:** Broadcom BCM94360NG 802.11ac 1200Mbps Bluetooth 4.0
--   **Ethernet:** Intel 2.5 Gb Ethernet I225-V
--   **Storage NVME:** 1x WD Black SN850 1TB + 1x WD Blue SN570 1TB + 1x Toshiba XG3 1TB
--   **Storage SATA:** 2x WD Blue WDS100T2B0A 1TB + 1x WD Blue WDS400T2B0A 4TB
--   **Case:** RAIJINTEK Thetis Window ATX Mid Tower Case
--   **PSU:** Lian Li SP750 850 W 80+ Gold SFX
--   **CPU Cooler:** ID-COOLING FROSTFLOW X 240 Snow
--   **Fans:** ARCTIC P12 PWM PST A-RGB 3-pack
+
+| Component         | Details                                                                                         |
+| :-----------      | :-------------                                                                                  |
+| **Motherboard:**  | Asus ROG Strix Z590-E Gaming                                                                    |
+| **CPU:**          | Intel Core i9-10900K                                                                            |
+| **RAM:**          | <ul><li>TEAMGROUP T-Force Xtreem ARGB 3600MHz CL14 (2 x 16GB)</li><li>G.Skill Trident Z RGB 3600MHz CL14 (2 x 16GB)</li></ul> |
+| **GPU:**          | <ul><li>AMD Radeon Pro WX 4100 4GB</li><li>Nvidia RTX 3080 Founders Edition 10GB</li></ul>      |
+| **Wi-Fi/BT:**     | Broadcom BCM94360NG 802.11ac 1200Mbps Bluetooth 4.0                                             |
+| **Ethernet:**     | Intel 2.5 Gb Ethernet I225-V                                                                    |
+| **Storage NVME:** | <ul><li>1x WD Black SN850 1TB</li><li>1x WD Blue SN570 1TB</li><li>1x Toshiba XG3 1TB</li></ul> |
+| **Storage SATA:** | <ul><li>2x WD Blue WDS100T2B0A 1TB</li><li>1x WD Blue WDS400T2B0A 4TB</li></ul>                 |
+| **Case:**         | RAIJINTEK Thetis Window ATX Mid Tower Case                                                      |
+| **PSU:**          | Lian Li SP750 850 W 80+ Gold SFX                                                                |
+| **CPU Cooler:**   | ID-COOLING FROSTFLOW X 240 Snow                                                                 |
+| **Fans:**         | ARCTIC P12 PWM PST A-RGB 3-pack                                                                 |
 
 --------------------------------------------------------------------------------------------------------------
 
@@ -221,6 +224,9 @@ In order to do this, you must remove the vrm heatsink, pcie cover, and the first
 ![Untitled (4)](https://user-images.githubusercontent.com/14919064/205151148-18a75ae7-bdbd-4908-835d-2d51f75eaa1e.jpg)
 
 ![rE00QKoJC0LEKEcNljoaXoM4FhIhuiJVeaFQnvfJn4A](https://user-images.githubusercontent.com/14919064/205152263-55391634-418b-402b-ad88-b90dcf818888.jpg)
+
+## USB
+
 
 ## Sleep
 
