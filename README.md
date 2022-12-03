@@ -175,6 +175,7 @@ If you intend to dual boot or triple boot your machine, then I highly recommend 
 # Post_Installation
 
 ## IGPU
+
 This is enabled in the EFI by default
 
 Intel UHD630 Headless mode working for hardware acceleration
@@ -191,6 +192,7 @@ DeviceProperties:
 ```
 
 ## No_IGPU
+
 This is for f skew processors without IGPU
 
 Remove the iGPU code block from above
@@ -210,25 +212,61 @@ The only way to get fully functioning bluetooth and wi-fi is to replace the wi-f
 In order to do this, you must remove the vrm heatsink, pcie cover, and the first m.2 heatsink to access the wi-fi card.
 
 1. remove the first m.2 heatsink
+
+![step1](https://user-images.githubusercontent.com/14919064/205451947-fa4894ba-0f6e-472d-a1a1-c6003230a998.png)
+
 2. remove the screws from the underside of the motherboard
-3. remove the heatsinksfrom the motherboard
+
+![step2](https://user-images.githubusercontent.com/14919064/205452571-f266e30c-5411-4876-84c6-a6772f979134.png)
+
+3. remove the heatsinks from the motherboard
+
+![step3](https://user-images.githubusercontent.com/14919064/205452754-908d802e-e88e-4985-a2b5-ff15f0be5827.png)
+
 4. remove the integrated io shield
+
+![step4](https://user-images.githubusercontent.com/14919064/205452906-58f20336-419c-4044-994a-ab8d09b66c8a.png)
+
 5. remove the silver enloosure holding the wi-fi card
+
+![step5](https://user-images.githubusercontent.com/14919064/205453072-2835a425-3e4d-41c4-a7ca-cd3f4f27b8d4.png)
+
 6. unscrew and unplug the old wi-fi card
 7. replace the old wifi card and plug the cables back in for the antennas
     - there will be some tape holding the original card down. it should peel away after a little force is applied
+    
+![rE00QKoJC0LEKEcNljoaXoM4FhIhuiJVeaFQnvfJn4A](https://user-images.githubusercontent.com/14919064/205152263-55391634-418b-402b-ad88-b90dcf818888.jpg)
+
 8. put it all back together in reverse order
 
-![Untitled (2)](https://user-images.githubusercontent.com/14919064/205151101-78ab7113-987e-42e1-903f-2af21152c24a.jpg)
-
-![Untitled (3)](https://user-images.githubusercontent.com/14919064/205151135-8b50258a-74fc-458c-b917-dd2ded64a3a1.jpg)
-
-![Untitled (4)](https://user-images.githubusercontent.com/14919064/205151148-18a75ae7-bdbd-4908-835d-2d51f75eaa1e.jpg)
-
-![rE00QKoJC0LEKEcNljoaXoM4FhIhuiJVeaFQnvfJn4A](https://user-images.githubusercontent.com/14919064/205152263-55391634-418b-402b-ad88-b90dcf818888.jpg)
+![step6](https://user-images.githubusercontent.com/14919064/205453204-7c371580-ebda-4535-93eb-40c7e0ba1852.png)
 
 ## USB
 
+I did my USB mapping via USBToolBox. If you want full install details then I recommend use that page directly.
+- https://github.com/USBToolBox/kext
+
+![USB Map Rear IO](https://user-images.githubusercontent.com/14919064/205454702-da89fbe1-85db-4799-800d-a8af62ba0642.png)
+
+![USB Map Configuration](https://user-images.githubusercontent.com/14919064/205456948-d7f42615-7027-4e83-b651-71ba14e47fd2.PNG)
+
+| Type                             | Port        | USBToolBox                            |
+| :------------------------------- | :---------- | :----------------------------------   |
+| Internal Audio                   | HS14        | Port 14                               |
+| USB 2.0                          | HS12        | Port 12                               |
+| USB 2.0                          | HS11        | Port 11                               |
+| USB 3.2 Gen 1                    | HS10 / SS10 | Port 10 (USB 2.0) / Port 24 (USB 3.0) |
+| USB 3.0                          | HS09 / SS09 | Port 9 (USB 2.0) / Port 23 (USB 3.0)  |
+| USB 3.0                          | HS08 / SS08 | Port 8 (USB 2.0) / Port 22 (USB 3.0)  |
+| USB 3.2 Gen 2 type c w/ switch   | HS07 / SS07 | Port 7 (USB 2.0) / Port 21 (USB 3.0)  |
+| USB 3.2 Gen 2                    | HS06 / SS06 | Port 6 (USB 2.0) / Port 20 (USB 3.0)  |
+| USB 3.2 Gen 2                    | HS05 / SS05 | Port 5 (USB 2.0) / Port 19 (USB 3.0)  |
+| USB 3.2 Gen 2x2 type c w/ switch | HS03 / SS03 | Port 3 (USB 2.0) / Port 18 (USB 3.0)  |
+| Internal Wi-Fi / Bluetooth       | HS02        | Port 2                                |
+
+Note:
+
+- If you do not install a compatible wi-fi card, then I recommend you disable the internal wi-fi card.
 
 ## Sleep
 
@@ -269,3 +307,13 @@ V1: initial release on Opencore 8.6 for Monterey 12.6.1
 
 https://github.com/jergoo/Hackintosh-ROG-STRIX-Z490I
 https://github.com/5T33Z0/Gigabyte-Z490-Vision-G-Hackintosh-OpenCore
+
+--------------------------------------------------------------------------------------------------------------
+
+# Sources
+
+- high quality pictures provided by kitguru tech, nexus, gadget pilipinas, and direct dial
+    - https://www.kitguru.net/components/motherboard/luke-hill/asus-rog-z590-motherboard-round-up/3/
+    - https://hexus.net/tech/reviews/mainboard/147673-asus-rog-strix-z590-e-gaming-wifi/
+    - https://www.gadgetpilipinas.net/2021/04/asus-rog-strix-z590-e-gaming-motherboard-review/
+    - https://www.directdial.com/us/item/asus-rog-strix-z590-e-90mb1640-m0aay0-gaming-wifi-6e-lga-1200-intel-11th-10th-gen-atx-gaming-desktop-motherboard/rogstrixz590egamingwifi
