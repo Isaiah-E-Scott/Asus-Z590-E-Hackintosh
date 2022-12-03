@@ -37,6 +37,7 @@ Highly recommended reading the whole OpenCore Install Guide before starting.
    - [Sleep](#sleep)
 - [Troubleshooting](#troubleshooting)
 - [Changelog](#changelog)
+- [Sources](#sources)
 
 --------------------------------------------------------------------------------------------------------------
     
@@ -61,7 +62,7 @@ Highly recommended reading the whole OpenCore Install Guide before starting.
 | **Wi-Fi/BT:**     | Broadcom BCM94360NG 802.11ac 1200Mbps Bluetooth 4.0                                             |
 | **Audio:**        | Realtek ALC4080 + Savitech SV3H712 AMP (layout-id:7)                                            |
 | **Ethernet:**     | Intel 2.5 Gb Ethernet I225-V                                                                    |
-| **Storage NVME:** | <ul><li>1x WD Black SN850 1TB</li><li>1x WD Blue SN570 1TB</li><li>1x Toshiba XG3 1TB</li></ul> |
+| **Storage NVME:** | <ul><li>1x WD Black SN850 1TB</li><li>1x Toshiba XG6 1TB</li><li>1x Toshiba XG3 1TB</li></ul>   |
 | **Storage SATA:** | <ul><li>2x WD Blue WDS100T2B0A 1TB</li><li>1x WD Blue WDS400T2B0A 4TB</li></ul>                 |
 | **Case:**         | RAIJINTEK Thetis Window ATX Mid Tower Case                                                      |
 | **PSU:**          | Lian Li SP750 850 W 80+ Gold SFX                                                                |
@@ -167,8 +168,10 @@ If you intend to dual boot or triple boot your machine, then I highly recommend 
 1. boot into Windows
 2. follow the Dortania guide to create the installation usb using windows
     -  https://dortania.github.io/OpenCore-Install-Guide/installer-guide/winblows-install.html#downloading-macos
+    -  I highly recommend using the 
 3. copy my provided EFI folder into your usb
-4. 
+4. restart your pc and boot into the usb
+5. now install mac normally
 
 --------------------------------------------------------------------------------------------------------------
 
@@ -248,6 +251,8 @@ I did my USB mapping via USBToolBox. If you want full install details then I rec
 
 ![USB Map Rear IO](https://user-images.githubusercontent.com/14919064/205454702-da89fbe1-85db-4799-800d-a8af62ba0642.png)
 
+![Untitled-1 (2)](https://user-images.githubusercontent.com/14919064/205457596-14f415d6-3fd4-4274-8aeb-c75e0657a9ee.png)
+
 ![USB Map Configuration](https://user-images.githubusercontent.com/14919064/205456948-d7f42615-7027-4e83-b651-71ba14e47fd2.PNG)
 
 | Type                             | Port        | USBToolBox                            |
@@ -304,9 +309,6 @@ Note:
 # Changelog
 
 V1: initial release on Opencore 8.6 for Monterey 12.6.1
-
-https://github.com/jergoo/Hackintosh-ROG-STRIX-Z490I
-https://github.com/5T33Z0/Gigabyte-Z490-Vision-G-Hackintosh-OpenCore
 
 --------------------------------------------------------------------------------------------------------------
 
