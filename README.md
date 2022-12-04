@@ -21,6 +21,7 @@ Highly recommended reading the whole OpenCore Install Guide before starting.
 --------------------------------------------------------------------------------------------------------------
 
 # Table of Contents
+
 - [Software](#software)
 - [Hardware](#hardware)
 - [Bios](#bios)
@@ -284,6 +285,7 @@ Note:
 --------------------------------------------------------------------------------------------------------------
 
 # Troubleshooting
+
 - **Random Freezes/Reboots:**
     - **Resolution:** Remove all samsung drives from the build. Samdung SSD controllers are not compatible with Mac OS seemingly whatsoever. If you have any Samsung drives in your system, I recommend you remove them for this build. Having them installed even just as storage drives causes random freezes and crashes.
         - drives tested with: Samsung PM981, Samsung 870 QVO
@@ -303,12 +305,25 @@ Note:
     <br>
 - **If you are using a DGPU in the first pcie slot:**
     - **Resolution:** delete block PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0) in config.plist
-
+    <br>
+- **The linux boot entry is not detected by OpenCore**
+    - **Resolution:** follow this guide by mswgen
+    - https://www.insanelymac.com/forum/topic/349838-guide-using-openlinuxboot-to-easily-boot-linux-from-opencore/
+    <br>
+- **There's an extra EFI boot entry in Opencore, opencore could not read \efi\**
+    - **Resolution:** mount the Linux efi partition and delete BOOTX64.EFI
+    - note: this will not break the grub bootloader and it can still boot from the bios
+    <br>
+- **Windows time does not match Mac or Liunx time**
+    - **Resolution:** Make Windows Use UTC Time By Editing the Registry
+    - you can do so by following this guide:
+        - https://www.howtogeek.com/323390/how-to-fix-windows-and-linux-showing-different-times-when-dual-booting/
 --------------------------------------------------------------------------------------------------------------
 
 # Changelog
 
-V1: initial release on Opencore 8.6 for Monterey 12.6.1
+**V2:** implemented fixes to ensure boot for linux<br>
+**V1:** initial release on Opencore 8.6 for Monterey 12.6.1
 
 --------------------------------------------------------------------------------------------------------------
 
