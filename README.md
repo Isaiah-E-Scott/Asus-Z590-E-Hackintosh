@@ -10,7 +10,7 @@ Don’t forget to edit the EFI/OC/config.plist file, you should generate your ow
 
 Highly recommended reading the whole OpenCore Install Guide before starting.
 
-- image of opencore bootloader
+![Untitled](https://user-images.githubusercontent.com/14919064/205663314-4cb89295-d3fe-4c97-93a7-5ab6c9f5c010.png)
 
 ![Screen Shot 2022-11-30 at 9 25 22 PM](https://user-images.githubusercontent.com/14919064/204953256-bb909cd8-accd-4b82-9e81-7ca227769dd8.png)
 
@@ -310,7 +310,7 @@ Note:
     - **Resolution:** follow this guide by mswgen
     - https://www.insanelymac.com/forum/topic/349838-guide-using-openlinuxboot-to-easily-boot-linux-from-opencore/
     <br>
-- **There's an extra EFI boot entry in Opencore, opencore could not read \efi\**
+- **There's an extra EFI boot entry in Opencore, opencore could not read \efi\\**
     - **Resolution:** mount the Linux efi partition and delete BOOTX64.EFI
     - note: this will not break the grub bootloader and it can still boot from the bios
     <br>
